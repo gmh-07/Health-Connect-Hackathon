@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <title>Upvote Downvote System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .voting-container {
+      text-align: center;
+    }
+
+    .vote-button {
+      font-size: 20px;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      outline: none;
+      color: green;
+    }
+
+    .vote-count {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="voting-container">
+  <button class="vote-button" onclick="vote('up')">Upvote</button>
+  <span class="vote-count" id="vote-count">0</span>
+  <button style="color: red;" class="vote-button" onclick="vote('down')">Downvote</button>
+</div>
+
+<script>
+  let voteCount = 0;
+
+  function vote(type) {
+    if (type === 'up') {
+      voteCount++;
+    } else if (type === 'down') {
+      voteCount--;
+    }
+
+    updateVoteCount();
+  }
+
+  function updateVoteCount() {
+    document.getElementById('vote-count').textContent = voteCount;
+  }
+</script>
+
+</body>
+</html>
