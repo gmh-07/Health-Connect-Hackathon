@@ -93,9 +93,9 @@ var boxes = document.querySelectorAll(".box")
 boxes.forEach(function(elem){
     elem.addEventListener("mouseenter",function(){
         var att = elem.getAttribute("data-image")
-        crsr.style.width = "470px"
-        crsr.style.height = "370px"
-        crsr.style.borderRadius = "0"
+        crsr.style.width = "310px"
+        crsr.style.height = "280px"
+        crsr.style.borderRadius = "300px"
         crsr.style.backgroundImage = `url(${att})`
     })
     elem.addEventListener("mouseleave",function(){
